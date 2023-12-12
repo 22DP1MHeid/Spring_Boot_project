@@ -16,7 +16,7 @@ public class DefaultController {
     
     @GetMapping(value = "/about")
     ModelAndView about() {
-        ModelAndView modelAndView = new ModelAndView("About");
+        ModelAndView modelAndView = new ModelAndView("about");
 
         String name = "Markuss";
         String surname = "Heidemanis";
