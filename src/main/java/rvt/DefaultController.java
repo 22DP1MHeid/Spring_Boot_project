@@ -32,4 +32,12 @@ public class DefaultController {
 
         return modelAndView;
     }
+    @GetMapping(value = "/about")
+    ModelAndView about() {
+        CsvManager manager = new CsvManager("data/hobbies.csv");
+
+        List hobbies = manager.getAllHobbies();
+
+        ModelAndView modelAndView
+    }
 }

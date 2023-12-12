@@ -1,5 +1,5 @@
 package rvt.CsvManager;
 
-public record csv() {
+public class csv {
 
 }
