@@ -1,5 +1,7 @@
 package rvt;
 
+import java.util.HashMap;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,29 +17,15 @@ public class DefaultController {
     }
     
     @GetMapping(value = "/about")
-    ModelAndView about() {
+    ModelAndView about(@RequestParam HashMap<String, String> queryStringParams) {
+
+        String name = queryStringParams.get("name");
+        String age = queryStringParams.get("age");
+
         ModelAndView modelAndView = new ModelAndView("about");
-
-        String name = "Markuss";
-        String surname = "Heidemanis";
-        int age = 18;
-        String group = "DP2-1";
-
-        modelAndView.addObject("age", age);
         modelAndView.addObject("name", name);
-        modelAndView.addObject("surname", surname);
-        modelAndView.addObject("group", group);
-
-        // model.addAttribute();
+        modelAndView.addObject("age", age);
 
         return modelAndView;
-    }
-    @GetMapping(value = "/about")
-    ModelAndView about() {
-        CsvManager manager = new CsvManager("data/hobbies.csv");
-
-        List hobbies = manager.getAllHobbies();
-
-        ModelAndView modelAndView
     }
 }

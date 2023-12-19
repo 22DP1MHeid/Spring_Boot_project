@@ -12,7 +12,7 @@ public class Hobby {
         this.title = title;
         this.description = description;
     }
-    public int getId() {}
+    public int getId() {
     public String getTitle() {}
     public String getDescription() {}
 
