@@ -40,6 +40,39 @@ public class PaymentTerminal {
         }
     }
 
+    public boolean eatAffordably(PaymentCard card) {
+        // an affordable meal costs 2.50 euros
+        // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+        // otherwise false is returned
+
+        if (card.balance() < 2.5) {
+            return false;
+        } else {
+            card.takeMoney(2.5);
+            affordableMeals += 1;
+            return true;
+        }
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+        // a hearty meal costs 4.30 euros
+        // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+        // otherwise false is returned
+
+        if (card.balance() < 4.3) {
+            return false;
+        } else {
+            card.takeMoney(4.3);
+            heartyMeals += 1;
+            return true;
+        }
+    }
+
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        money += sum;
+        card.addMoney(sum);;
+    }
+
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
