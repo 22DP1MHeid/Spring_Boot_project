@@ -2,16 +2,29 @@ package rvt;
 
 public class Sorter {
     
-    public static int testSmallest() {
-        int[] intArray = {3, 5, 10, 500, 17, 2};
-        int smallest = intArray[0];
+    public static int smallest(int[] array) {
+        int smallest = array[0];
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] < smallest) {
-                smallest = intArray[i];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < smallest) {
+                smallest = array[i];
             }
         }
         return smallest;
+    }
+
+    public static int indexOfSmallest(int[] array){
+        int smallest = array[0];
+        int smallestIndex = array[0];
+
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < smallest) {
+                smallest = array[i];
+                smallestIndex = i;
+            }
+        }
+        return smallestIndex;
     }
 }
 
