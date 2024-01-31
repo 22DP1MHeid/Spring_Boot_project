@@ -1,5 +1,7 @@
 package rvt;
 
+import java.util.Arrays;
+
 public class Sorter {
     
     public static int smallest(int[] array) {
@@ -53,5 +55,20 @@ public class Sorter {
             int smallestIndex = indexOfSmallestFrom(array, i);
             swap(array, i, smallestIndex);
         }
+    }
+
+    public static void builtInSorter(int[] array) {
+        System.out.println(Arrays.toString(array));
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
+    }
+
+    public static int linearSearch(int[] array, int searched) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == searched) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

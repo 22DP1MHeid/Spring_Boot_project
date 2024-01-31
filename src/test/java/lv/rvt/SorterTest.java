@@ -51,4 +51,21 @@ public class SorterTest {
         Sorter.sort(intArray);
         assertArrayEquals(resultingArray, intArray);
     }
+
+    @Test
+    public void testBuiltInSorter() {
+        int[] intArray = {4, 9, 2, 3, 1, 5, 7, 6, 8};
+        int[] resultingArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        Sorter.builtInSorter(intArray);
+        assertArrayEquals(resultingArray, intArray);
+    }
+
+    @Test
+    public void testLinearSearch() {
+        int[] intArray = {4, 9, 2, 3, 1, 5, 7, 6, 8};
+        int searched = 3;
+
+        assertEquals(3, Sorter.linearSearch(intArray, searched));
+    }
 }
