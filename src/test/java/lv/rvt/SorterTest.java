@@ -43,5 +43,12 @@ public class SorterTest {
         assertArrayEquals(resultingArray, intArray);
     }
 
+    @Test
+    public void testSort() {
+        int[] intArray = {4, 9, 2, 3, 1, 5, 7, 6, 8};
+        int[] resultingArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
+        Sorter.sort(intArray);
+        assertArrayEquals(resultingArray, intArray);
+    }
 }

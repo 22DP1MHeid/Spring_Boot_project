@@ -46,4 +46,12 @@ public class Sorter {
         array[index1] = array[index2];
         array[index2] = tempNum;
     }
+
+    public static void sort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array);
+            int smallestIndex = indexOfSmallestFrom(array, i);
+            swap(array, i, smallestIndex);
+        }
+    }
 }

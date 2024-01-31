@@ -1,4 +1,4 @@
-package rvt;
+package rvt.exercises;
 
 public class Money {
     private final int euros;
