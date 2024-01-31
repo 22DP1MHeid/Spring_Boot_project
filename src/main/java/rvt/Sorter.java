@@ -74,7 +74,7 @@ public class Sorter {
 
     public static int binarySearch(int[] array, int searched) {
         int begin = 0;
-        int end = array.length;
+        int end = array.length - 1;
 
         while (begin < end) {
             int middle = (end + begin) / 2;
