@@ -39,5 +39,11 @@ public class Sorter {
         }
         return smallestIndex;
     }
-}
 
+    public static void swap(int[] array, int index1, int index2) {
+        int tempNum = array[index1];
+        
+        array[index1] = array[index2];
+        array[index2] = tempNum;
+    }
+}

@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import rvt.Sorter;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class SorterTest {
@@ -30,6 +31,17 @@ public class SorterTest {
         
         assertEquals(8, Sorter.indexOfSmallestFrom(intArray, startIndex));
     }
+
+    @Test
+    public void testSwap() {
+        int[] intArray = {3, 5, 1, 6, 7, 10, 24, 5, 1};
+        int[] resultingArray = {3, 5, 1, 6, 24, 10, 7, 5, 1};
+        int index1 = 4;
+        int index2 = 6;
+        Sorter.swap(intArray, index1, index2);
+
+        assertArrayEquals(resultingArray, intArray);
+    }
+
+
 }
-
-
