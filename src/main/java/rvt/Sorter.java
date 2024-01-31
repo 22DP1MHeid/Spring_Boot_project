@@ -71,4 +71,26 @@ public class Sorter {
         }
         return -1;
     }
+
+    public static int binarySearch(int[] array, int searched) {
+        int begin = 0;
+        int end = array.length;
+
+        while (begin < end) {
+            int middle = (end + begin) / 2;
+
+            if (array[middle] == searched) {
+                return array[middle];
+            }
+
+            if (array[middle] < searched) {
+                begin = middle + 1;
+            }
+
+            if (array[middle] > searched) {
+                end = middle - 1;
+            }
+        }
+        return -1;
+    }
 }

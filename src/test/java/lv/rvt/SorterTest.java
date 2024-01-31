@@ -68,4 +68,12 @@ public class SorterTest {
 
         assertEquals(3, Sorter.linearSearch(intArray, searched));
     }
+
+    @Test
+    public void testBinarySearch() {
+        int[] intArray = {1, 2, 3, 5, 8, 46, 66, 85, 99};
+        int searched = 3;
+
+        assertEquals(3, Sorter.binarySearch(intArray, searched));
+    }
 }
