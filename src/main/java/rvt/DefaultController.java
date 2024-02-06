@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import rvt.temp.A;
+import rvt.temp.B;
+import rvt.temp.C;
+
 @Controller
 public class DefaultController {
 
@@ -27,5 +31,25 @@ public class DefaultController {
         modelAndView.addObject("age", age);
 
         return modelAndView;
+    }
+
+    public static void testABC() {
+
+        A a = new A();
+        B b = new B();
+        C c = new C();
+
+        a.a();
+        b.b();
+        c.c();
+    }
+
+    public static void testInheritance() {
+
+        C c = new C();
+
+        c.a();
+        c.b();
+        c.c();
     }
 }
