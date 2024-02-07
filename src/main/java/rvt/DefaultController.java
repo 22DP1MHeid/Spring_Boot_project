@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import rvt.exercises.Person;
+import rvt.exercises.Student;
 import rvt.temp.A;
 import rvt.temp.B;
 import rvt.temp.C;
@@ -60,5 +61,14 @@ public class DefaultController {
         Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
         System.out.println(ada);
         System.out.println(esko);
+    }
+
+    public static void testStudent() {
+
+        Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(ollie);
+        System.out.println("Study credits " + ollie.credits());
+        ollie.study();
+        System.out.println("Study credits "+ ollie.credits());
     }
 }
