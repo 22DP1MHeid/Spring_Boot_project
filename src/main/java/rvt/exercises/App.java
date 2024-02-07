@@ -81,9 +81,10 @@ public class App {
         rvt.DefaultController.testABC();
         rvt.DefaultController.testInheritance(); 
         rvt.DefaultController.testPerson();
-        rvt.DefaultController.testStudent();*/
-
-        rvt.DefaultController.testStudentToString();
+        rvt.DefaultController.testStudent();
+        rvt.DefaultController.testStudentToString();*/
+        
+        rvt.DefaultController.testTeacher();
 
     }
 }
