@@ -1,13 +1,27 @@
 package rvt.exercises;
 
+import java.util.ArrayList;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class App {
+
+    public static void printPersons(ArrayList<Person> persons) {
+        int size = persons.size();
+        for (int i = 0; i < size; i++) {
+            System.out.println(persons.get(i));
+        }
+    }
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
-        
+
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+
+        printPersons(persons);
 
         /* 
         // test for the 1st step of Card Payments
@@ -80,11 +94,10 @@ public class App {
         
         rvt.DefaultController.testABC();
         rvt.DefaultController.testInheritance(); 
+
         rvt.DefaultController.testPerson();
         rvt.DefaultController.testStudent();
-        rvt.DefaultController.testStudentToString();*/
-        
-        rvt.DefaultController.testTeacher();
-
+        rvt.DefaultController.testStudentToString();
+        rvt.DefaultController.testTeacher();*/
     }
 }
