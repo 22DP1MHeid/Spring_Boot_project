@@ -9,7 +9,7 @@ public class App {
         SpringApplication.run(App.class, args);
         
 
-
+        /* 
         // test for the 1st step of Card Payments
         PaymentCard petesCard = new PaymentCard(10);
 
@@ -76,6 +76,11 @@ public class App {
 
         System.out.println("amount of money on the card is " + annesCard3.balance() + " euros");
 
-        System.out.println(unicafeExactum3);
+        System.out.println(unicafeExactum3); */
+
+        rvt.DefaultController.testPerson();
+        rvt.DefaultController.testABC();
+        rvt.DefaultController.testInheritance();
+
     }
 }
