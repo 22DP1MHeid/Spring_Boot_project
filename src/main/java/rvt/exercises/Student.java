@@ -27,4 +27,8 @@ public class Student extends Person {
     public int credits() {
         return this.credits;
     }
+
+    public String toString() {
+        return this.name + "\n" + this.adress + "\n" + "Study credits " + this.credits;
+    }
 }

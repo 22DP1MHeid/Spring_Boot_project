@@ -79,10 +79,11 @@ public class App {
         System.out.println(unicafeExactum3); 
         
         rvt.DefaultController.testABC();
-        rvt.DefaultController.testInheritance(); */
-
+        rvt.DefaultController.testInheritance(); 
         rvt.DefaultController.testPerson();
-        rvt.DefaultController.testStudent();
+        rvt.DefaultController.testStudent();*/
+
+        rvt.DefaultController.testStudentToString();
 
     }
 }
