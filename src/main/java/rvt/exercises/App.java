@@ -76,11 +76,12 @@ public class App {
 
         System.out.println("amount of money on the card is " + annesCard3.balance() + " euros");
 
-        System.out.println(unicafeExactum3); */
+        System.out.println(unicafeExactum3); 
+        
+        rvt.DefaultController.testABC();
+        rvt.DefaultController.testInheritance(); */
 
         rvt.DefaultController.testPerson();
-        rvt.DefaultController.testABC();
-        rvt.DefaultController.testInheritance();
 
     }
 }

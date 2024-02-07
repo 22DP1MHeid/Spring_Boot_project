@@ -9,4 +9,8 @@ public class Person {
         this.name = name;
         this.adress = adress;
     }
+
+    public String toString() {
+        return name + "\n" + adress;
+    }
 }
