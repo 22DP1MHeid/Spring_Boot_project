@@ -18,7 +18,10 @@ public class App {
         SpringApplication.run(App.class, args);
 
 
-        Box box = new Box(10);
+        Person anna = new Person("Anna", Education.PHD);
+        System.out.println(anna);
+
+        /* Box box = new Box(10);
         
         box.add(new Book("Fyodor Dostoevsky", "Crime and Punishment", 2)) ;
         box.add(new Book("Robert Martin", "Clean Code", 1));
@@ -31,7 +34,7 @@ public class App {
         System.out.println(box);
     }
 
-        /* 
+        
         Book book1 = new Book("Fyodor Dostoevsky", "Crime and Punishment", 2);
         Book book2 = new Book("Robert Martin", "Clean Code", 1);
         Book book3 = new Book("Kent Beck", "Test Driven Development", 0.5);
@@ -129,4 +132,5 @@ public class App {
         rvt.DefaultController.testStudent();
         rvt.DefaultController.testStudentToString();
         rvt.DefaultController.testTeacher();*/
+    }
 }
